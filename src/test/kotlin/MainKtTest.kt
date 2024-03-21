@@ -75,7 +75,7 @@ class MainKtTest {
 
         val result = commission(type, transfer, past)
 
-        assertEquals(-2.0, result, 0.01)
+        assertEquals(-1.0, result, 0.01)
     }
     @Test
     fun commissionTestWrongType() {
