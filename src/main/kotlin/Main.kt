@@ -2,7 +2,7 @@ package ru.netology
 
 const val TYPE_MC = "MasterCard"
 const val TYPE_VISA = "Visa"
-const val TYPE_VKPay = "VKPay"
+const val TYPE_VkPay = "VKPay"
 const val ERROR_WRONG_TYPE = -1.0
 const val ERROR_LIMIT = -2.0
 
@@ -17,7 +17,7 @@ fun commission (typeCard : String, transfer : Int, past : Int) : Double {
         when (typeCard) {
             TYPE_MC -> if (transfer <= 75000) 0.0 else (transfer * 0.006) + 20
             TYPE_VISA -> if (transfer * 0.0075 > 35) transfer * 0.0075 else 35.0
-            TYPE_VKPay -> 0.0
+            TYPE_VkPay -> 0.0
             else -> ERROR_WRONG_TYPE
         }
     }
